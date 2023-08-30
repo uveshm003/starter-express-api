@@ -3,7 +3,7 @@ const app = express()
 app.all('/', (req, res) => {
     res.send('Yo!')
 })
-app.all('/restaurants', (req, res) => {
+app.get('/restaurants', (req, res) => {
     res.send({
         restaraunts: [
             {
@@ -50,7 +50,7 @@ app.all('/restaurants', (req, res) => {
         ]
     })
 })
-app.all('/reservations', (req, res) => {
+app.get('/reservations', (req, res) => {
     res.send(
         {
             reservations: [
