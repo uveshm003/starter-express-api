@@ -1,11 +1,9 @@
 const express = require('express')
 const app = express()
 app.all('/', (req, res) => {
-    console.log("Just got a request!")
     res.send('Yo!')
 })
-app.get('/restaurants', (req, res) => {
-    console.log("Just got a request!")
+app.all('/restaurants', (req, res) => {
     res.send({
         restaraunts: [
             {
@@ -52,8 +50,7 @@ app.get('/restaurants', (req, res) => {
         ]
     })
 })
-app.get('/reservations', (req, res) => {
-    console.log("Just got a request!")
+app.all('/reservations', (req, res) => {
     res.send(
         {
             reservations: [
