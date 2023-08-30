@@ -4,7 +4,7 @@ app.all('/', (req, res) => {
     console.log("Just got a request!")
     res.send('Yo!')
 })
-app.all('/restaurants', (req, res) => {
+app.get('/restaurants', (req, res) => {
     console.log("Just got a request!")
     res.send({
         restaraunts: [
@@ -52,7 +52,7 @@ app.all('/restaurants', (req, res) => {
         ]
     })
 })
-app.all('/reservations', (req, res) => {
+app.get('/reservations', (req, res) => {
     console.log("Just got a request!")
     res.send(
         {
